@@ -28,7 +28,7 @@ body {
 .logo {
     margin: 150px auto 30px;
     display: block;
-    width: 70%;
+    width: 50%;
     max-width: 400px;
 }
 
@@ -909,7 +909,7 @@ button:active {
 .kp-hero {
   max-width: 1320px;
   margin: 24px auto 22px;
-  padding: 22px 26px;
+  padding: 10px 26px;
   background: linear-gradient(135deg, #a6c4e7 0%, #0b2a4a 100%);
   color: white;
   border-radius: 18px;
@@ -927,11 +927,11 @@ button:active {
 
 .kp-hero .logo {
   margin: 0;
-  width: 260px;
+  width: 420px;          /* größer */
   max-width: 100%;
   background: rgba(255,255,255,0.08);
   border-radius: 14px;
-  padding: 10px;
+  padding: 6px 10px;     /* weniger Innenabstand */
   box-shadow: none;
 }
 
