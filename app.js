@@ -654,13 +654,36 @@ function renderTableHeaderWithImage(imgSrc = "bild3.jpg") {
 
 function updateKpNavigation(pageId) {
   document.querySelectorAll(".kp-nav-item").forEach(btn => {
-    btn.classList.remove("active");
+    btn.classList.remove("active", "parent-active");
 
     const target = btn.dataset.page;
     if (target === pageId) {
       btn.classList.add("active");
     }
   });
+
+  const dcPages = new Set(["page-6", "page-24", "page-23", "page-8", "page-9"]);
+  const acPages = new Set(["page-7", "page-11", "page-14", "page-14-2", "page-21", "page-10", "page-18", "page-20", "page-22"]);
+
+  document.querySelectorAll(".kp-subnav").forEach(group => {
+    group.classList.remove("open");
+  });
+
+  if (dcPages.has(pageId)) {
+    document.querySelector('.kp-subnav[data-parent="dc"]')?.classList.add("open");
+
+    if (pageId !== "page-6") {
+      document.querySelector('.kp-nav-item[data-page="page-6"]')?.classList.add("parent-active");
+    }
+  }
+
+  if (acPages.has(pageId)) {
+    document.querySelector('.kp-subnav[data-parent="ac"]')?.classList.add("open");
+
+    if (pageId !== "page-7") {
+      document.querySelector('.kp-nav-item[data-page="page-7"]')?.classList.add("parent-active");
+    }
+  }
 }
 
 const kpSummaryConfig = [

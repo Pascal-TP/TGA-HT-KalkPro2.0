@@ -33,18 +33,38 @@
         <aside class="kp-nav-card">
             <h2>Hier befinden Sie sich</h2>
 
-            <div class="kp-nav-list">
-                <button class="kp-nav-item" data-page="page-3" onclick="showPage('page-3')">Auswahl KV /
-                    Anfrage</button>
-                <button class="kp-nav-item" data-page="page-4" onclick="showPage('page-4')">Hauptmenü</button>
-                <button class="kp-nav-item" data-page="page-6" onclick="showPage('page-6')">DC</button>
-                <button class="kp-nav-item" data-page="page-7" onclick="showPage('page-7')">AC</button>
-                <button class="kp-nav-item" data-page="page-15" onclick="showPage('page-15')">Versicherung</button>
-                <button class="kp-nav-item" data-page="page-14-1"
-                    onclick="showPage('page-14-1')">Downloadbereich</button>
-                <button class="kp-nav-item danger" onclick="clearInputs()">Eingaben löschen</button>
-                <button class="kp-nav-item danger" onclick="logout()">Abmelden</button>
-            </div>
+           <div class="kp-nav-list">
+    <button class="kp-nav-item" data-page="page-3" onclick="showPage('page-3')">Auswahl KV / Anfrage</button>
+    <button class="kp-nav-item" data-page="page-4" onclick="showPage('page-4')">Hauptmenü</button>
+
+    <button class="kp-nav-item" data-page="page-6" onclick="showPage('page-6')">DC</button>
+
+    <div class="kp-subnav" data-parent="dc">
+        <button class="kp-nav-item sub" data-page="page-24" onclick="showPage('page-24')">Flachdach</button>
+        <button class="kp-nav-item sub" data-page="page-23" onclick="showPage('page-23')">Schrägdach</button>
+        <button class="kp-nav-item sub" data-page="page-8" onclick="showPage('page-8')">Optimierer</button>
+        <button class="kp-nav-item sub" data-page="page-9" onclick="showPage('page-9')">Gerüst</button>
+    </div>
+
+    <button class="kp-nav-item" data-page="page-7" onclick="showPage('page-7')">AC</button>
+
+    <div class="kp-subnav" data-parent="ac">
+        <button class="kp-nav-item sub" data-page="page-11" onclick="showPage('page-11')">Wechselrichter</button>
+        <button class="kp-nav-item sub sub-2" data-page="page-14" onclick="showPage('page-14')">Wechselrichter „strang“</button>
+        <button class="kp-nav-item sub sub-2" data-page="page-14-2" onclick="showPage('page-14-2')">Wechselrichter „hybrid“</button>
+        <button class="kp-nav-item sub" data-page="page-21" onclick="showPage('page-21')">Zubehör Wechselrichter</button>
+        <button class="kp-nav-item sub" data-page="page-10" onclick="showPage('page-10')">Speicher</button>
+        <button class="kp-nav-item sub" data-page="page-18" onclick="showPage('page-18')">Wallbox</button>
+        <button class="kp-nav-item sub" data-page="page-20" onclick="showPage('page-20')">Zählerschrank</button>
+        <button class="kp-nav-item sub sub-2" data-page="page-22" onclick="showPage('page-22')">Extras Zählerschrank</button>
+    </div>
+
+    <button class="kp-nav-item" data-page="page-15" onclick="showPage('page-15')">Versicherung</button>
+    <button class="kp-nav-item" data-page="page-14-1" onclick="showPage('page-14-1')">Downloadbereich</button>
+
+    <button class="kp-nav-item danger" onclick="clearInputs()">Eingaben löschen</button>
+    <button class="kp-nav-item danger" onclick="logout()">Abmelden</button>
+</div>
         </aside>
 
         <main class="kp-content-card">
