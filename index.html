@@ -34,12 +34,14 @@
             <h2>Hier befinden Sie sich</h2>
 
             <div class="kp-nav-list">
-                <button class="kp-nav-item" onclick="showPage('page-3')">Auswahl KV / Anfrage</button>
-                <button class="kp-nav-item" onclick="showPage('page-4')">Hauptmenü</button>
-                <button class="kp-nav-item" onclick="showPage('page-6')">DC</button>
-                <button class="kp-nav-item" onclick="showPage('page-7')">AC</button>
-                <button class="kp-nav-item" onclick="showPage('page-15')">Versicherung</button>
-                <button class="kp-nav-item" onclick="showPage('page-14-1')">Downloadbereich</button>
+                <button class="kp-nav-item" data-page="page-3" onclick="showPage('page-3')">Auswahl KV /
+                    Anfrage</button>
+                <button class="kp-nav-item" data-page="page-4" onclick="showPage('page-4')">Hauptmenü</button>
+                <button class="kp-nav-item" data-page="page-6" onclick="showPage('page-6')">DC</button>
+                <button class="kp-nav-item" data-page="page-7" onclick="showPage('page-7')">AC</button>
+                <button class="kp-nav-item" data-page="page-15" onclick="showPage('page-15')">Versicherung</button>
+                <button class="kp-nav-item" data-page="page-14-1"
+                    onclick="showPage('page-14-1')">Downloadbereich</button>
                 <button class="kp-nav-item danger" onclick="clearInputs()">Eingaben löschen</button>
                 <button class="kp-nav-item danger" onclick="logout()">Abmelden</button>
             </div>
