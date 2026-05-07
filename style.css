@@ -1315,10 +1315,6 @@ padding-left: 92px;
   align-items: center;
 }
 
-.kp-content-card #page-40 .col-a {
-  display: none;
-}
-
 /* Kopfzeile */
 .kp-content-card #page-40 .table-header {
   background: var(--accent);
@@ -1327,6 +1323,35 @@ padding-left: 92px;
   padding: 8px 10px;
   font-size: 12px;
   font-weight: 700;
+}
+
+/* Seite 40: erste Spalte ausblenden, aber Raster behalten */
+.kp-content-card #page-40 .row.summary-row,
+.kp-content-card #page-40 .row.table-header {
+  grid-template-columns:
+    0
+    minmax(260px, 1fr)
+    62px
+    58px
+    100px
+    110px !important;
+}
+
+/* erste Spalte unsichtbar machen, aber NICHT display:none */
+.kp-content-card #page-40 .col-a,
+.kp-content-card #page-40 .table-header > div:first-child {
+  visibility: hidden;
+  overflow: hidden;
+  padding: 0;
+  width: 0;
+}
+
+/* Beschreibung sauber links */
+.kp-content-card #page-40 .col-b {
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  padding-left: 0;
 }
 
 /* Positionszeilen */
