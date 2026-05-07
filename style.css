@@ -1432,3 +1432,81 @@ padding-left: 92px;
 .kp-content-card #page-40 .col-f {
   padding-left: 4px;
 }
+
+/* ================================
+   DRUCKANSICHT: NUR HEADER + SEITE 40
+================================ */
+
+@media print {
+
+  body {
+    background: white !important;
+  }
+
+  .kp-nav-card,
+  .kp-summary-card,
+  #timer,
+  #login-info,
+  #release-info,
+  #user-actions,
+  button {
+    display: none !important;
+  }
+
+  #app {
+    display: block !important;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .kp-hero {
+    display: block !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 0 18px 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  .kp-hero-left {
+    display: block !important;
+  }
+
+  .kp-hero .logo {
+    width: 260px !important;
+    max-width: 260px !important;
+    padding: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+  .kp-shell {
+    display: block !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .kp-content-card {
+    display: block !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  .page {
+    display: none !important;
+  }
+
+  #page-40 {
+    display: block !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    box-shadow: none !important;
+  }
+}
