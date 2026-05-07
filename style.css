@@ -1510,3 +1510,40 @@ padding-left: 92px;
     box-shadow: none !important;
   }
 }
+
+/* ================================
+   GROSSE MENÜBUTTONS (DC / AC / WR)
+================================ */
+
+.kp-content-card .menu-button,
+.kp-content-card .submenu-button {
+  display: block;
+  width: 96%;
+  max-width: none;
+  margin: 10px auto;
+  padding: 18px 20px;
+
+  background: #f8fafc;
+  border: 1px solid #d7dfe8;
+  border-radius: 14px;
+
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+
+  transition: 0.2s ease;
+}
+
+.kp-content-card .menu-button:hover,
+.kp-content-card .submenu-button:hover {
+  background: var(--accent);
+  border-color: #9eb8d0;
+  transform: translateY(-2px);
+}
+
+/* kleinere Unterpunkte */
+.kp-content-card .submenu-button {
+  font-size: 16px;
+  padding: 15px 18px;
+}
