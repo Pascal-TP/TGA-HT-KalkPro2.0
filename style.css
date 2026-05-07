@@ -1152,16 +1152,22 @@ body.is-logged-in .kp-login-nav {
 .kp-content-card .title {
   font-size: 22px;
   margin: 22px 0 10px;
+  text-align: left;
+padding-left: 92px;
 }
 
 .kp-content-card .subtitle {
   font-size: 17px;
   margin: 14px 0 8px;
+  text-align: left;
+padding-left: 92px;
 }
 
 .kp-content-card .midtitle {
   font-size: 15px;
   margin: 10px 0 6px;
+  text-align: left;
+padding-left: 92px;
 }
 
 /* Beschreibungstexte nicht mehr wie große Tabellenzeilen */
@@ -1186,8 +1192,10 @@ body.is-logged-in .kp-login-nav {
 .kp-content-card .row.no-price .col-b,
 .kp-content-card .beschreibung-fett-row .col-b {
   display: block;
-  text-align: center;
-  padding: 0;
+  text-align: left;
+  padding-left: 92px;   /* ungefähr Bildbreite */
+  padding-right: 12px;
+  line-height: 1.35;
 }
 
 /* Tabellen kompakter */
