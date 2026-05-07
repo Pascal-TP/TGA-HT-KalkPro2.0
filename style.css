@@ -910,7 +910,7 @@ button:active {
   max-width: 1320px;
   margin: 24px auto 22px;
   padding: 22px 26px;
-  background: linear-gradient(135deg, #0b2a4a 0%, #163f6f 100%);
+  background: linear-gradient(135deg, #0b2a4a 0%, #a6c4e7 100%);
   color: white;
   border-radius: 18px;
   box-shadow: var(--shadow);
@@ -1061,4 +1061,28 @@ button:active {
   .kp-shell {
     padding: 0 14px;
   }
+}
+
+/* ================================
+   KALKPRO AUSWAHL-ZUSAMMENFASSUNG
+================================ */
+
+.kp-summary-item {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.kp-summary-item span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.kp-summary-item strong {
+  font-size: 15px;
+  color: var(--primary);
 }

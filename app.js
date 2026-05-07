@@ -663,6 +663,51 @@ function updateKpNavigation(pageId) {
   });
 }
 
+const kpSummaryConfig = [
+  { key: "page24Data", label: "Flachdach" },
+  { key: "page23Data", label: "Schrägdach" },
+  { key: "page8Data", label: "Optimierer" },
+  { key: "page9Data", label: "Gerüst" },
+  { key: "page14Data", label: "Wechselrichter" },
+  { key: "page142Data", label: "Zubehör WR" },
+  { key: "page10Data", label: "Speicher" },
+  { key: "page18Data", label: "Wallbox" },
+  { key: "page20Data", label: "Zählerschränke" },
+  { key: "page21Data", label: "Zubehör Zähler" },
+  { key: "page22Data", label: "Extras" }
+];
+
+function getKpTotalQty(storageKey) {
+  const data = JSON.parse(localStorage.getItem(storageKey) || "{}");
+
+  return Object.values(data).reduce((sum, value) => {
+    const n = parseFloat(String(value).replace(",", ".")) || 0;
+    return sum + n;
+  }, 0);
+}
+
+function updateKpSelectionSummary() {
+  const box = document.getElementById("kp-selection-summary");
+  if (!box) return;
+
+  let html = "";
+
+  kpSummaryConfig.forEach(item => {
+    const qty = getKpTotalQty(item.key);
+
+    if (qty > 0) {
+      html += `
+        <div class="kp-summary-item">
+          <span>${item.label}</span>
+          <strong>${qty.toLocaleString("de-DE")} Stück</strong>
+        </div>
+      `;
+    }
+  });
+
+  box.innerHTML = html || `<p class="kp-empty-summary">Noch keine Auswahl vorhanden.</p>`;
+}
+
 // -----------------------------
 // showPage
 // -----------------------------
@@ -745,6 +790,7 @@ async function showPage(id, fromHistory = false) {
 
   updateAuthButtons();
   updateKpNavigation(id);
+  updateKpSelectionSummary();
 }
 
 // -----------------------------
@@ -4324,6 +4370,12 @@ function getInitialPage() {
 
 document.body.addEventListener("mousemove", () => remaining = 600);
 document.body.addEventListener("keydown", () => remaining = 600);
+
+document.addEventListener("input", (e) => {
+  if (e.target && e.target.classList.contains("menge-input")) {
+    setTimeout(updateKpSelectionSummary, 0);
+  }
+});
 
 // -----------------------------
 // Funktionen für HTML global verfügbar machen
