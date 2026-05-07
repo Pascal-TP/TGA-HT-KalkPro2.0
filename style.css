@@ -1330,15 +1330,23 @@ padding-left: 92px;
 .kp-content-card #page-40 .row.table-header {
   display: grid;
   grid-template-columns:
-    14px
-    minmax(300px, 1fr)
-    70px
+    6px
+    minmax(210px, 1fr)
     60px
-    110px
-    120px !important;
+    50px
+    95px
+    105px !important;
 
-  gap: 10px;
+  gap: 6px;
   align-items: center;
+}
+
+.kp-content-card #page-40 .table-header {
+  padding: 7px 6px;
+}
+
+.kp-content-card #page-40 .summary-row {
+  padding: 8px 6px;
 }
 
 /* erste Spalte unsichtbar machen, aber NICHT display:none */
