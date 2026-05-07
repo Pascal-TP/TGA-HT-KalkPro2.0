@@ -9,7 +9,7 @@ Beschreibung_fett;Leistungen:;;;
 ;- Einrichtung Notstromfunktion Wechselrichter;;;
 ;- Funktionsprüfung;;;
 ;;;;
-;Netzumschaltbox Enwitec 20 kW;€/Stk.;1474,75;5
+;Netzumschaltbox Enwitec 20 kW;€/Stk.;9999,99;5
 ;;;;
 Untertitel;Montage und Lieferung PV-Point;;;
 Beschreibung_fett;Materialien:;;;
@@ -19,7 +19,7 @@ Beschreibung_fett;Leistungen:;;;
 ;- Einrichtung Notstromfunktion Wechselrichter;;;
 ;- Funktionsprüfung;;;
 ;;;;
-;PV-Point;€/Stk.;369,97;6
+;PV-Point;€/Stk.;9999,99;6
 ;;;;
 Untertitel;Montage und Lieferung Backup Switch;;;
 Beschreibung_fett;Materialien:;;;
@@ -29,7 +29,7 @@ Beschreibung_fett;Leistungen:;;;
 ;- Programmierung und Inbetriebnahme am Wechselrichter;;;
 ;- Funktionsprüfung;;;
 ;;;;
-;Backup Switch;€/Stk.;590,61;7
+;Backup Switch;€/Stk.;9999,99;7
 ;;;;
 Untertitel;Montage und Lieferung Backup Controller;;;
 Beschreibung_fett;Materialien:;;;
@@ -39,7 +39,7 @@ Beschreibung_fett;Leistungen:;;;
 ;- Programmierung und Inbetriebnahme am Wechselrichter;;;
 ;- Funktionsprüfung;;;
 ;;;;
-;Backup Controller;€/Stk.;950,46;8
+;Backup Controller;€/Stk.;9999,99;8
 ;;;;
 Untertitel;Montage und Lieferung Ohmpilot;;;
 Beschreibung_fett;Materialien:;;;
@@ -50,4 +50,4 @@ Beschreibung_fett;Leistungen:;;;
 ;- Zuleitung von der UV zum Gerät;;;
 ;- Zuleitung vom Gerät zum bauseitigen Heizstab;;;
 ;;;;
-;Ohmpilot;€/Stk.;1378,2;9
+;Ohmpilot;€/Stk.;9999,99;9
