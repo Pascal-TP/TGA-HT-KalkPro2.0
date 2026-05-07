@@ -462,6 +462,7 @@ const auth = getAuth(fbApp);
     const info = document.getElementById("login-info");
 
     if (user) {
+      document.body.classList.add("is-logged-in");
       // UI
       actions?.classList.remove("hidden");
       if (info) info.innerText = "Angemeldet als: " + user.email;
@@ -473,6 +474,7 @@ const auth = getAuth(fbApp);
       showPage(target, true);
 
     } else {
+      document.body.classList.remove("is-logged-in");
       // UI
       actions?.classList.add("hidden");
       if (info) info.innerText = "";
