@@ -901,3 +901,164 @@ button:active {
     text-align: center;
   }
 }
+
+/* ================================
+   KALKPRO 3-SPALTEN-LAYOUT
+================================ */
+
+.kp-hero {
+  max-width: 1320px;
+  margin: 24px auto 22px;
+  padding: 22px 26px;
+  background: linear-gradient(135deg, #0b2a4a 0%, #163f6f 100%);
+  color: white;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.kp-hero-left {
+  display: flex;
+  align-items: center;
+}
+
+.kp-hero .logo {
+  margin: 0;
+  width: 260px;
+  max-width: 100%;
+  background: rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: none;
+}
+
+.kp-hero-right {
+  display: grid;
+  gap: 6px;
+  justify-items: end;
+  font-size: 14px;
+}
+
+.kp-shell {
+  max-width: 1320px;
+  min-width: 980px;
+  margin: 0 auto 30px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 260px minmax(520px, 1fr) 300px;
+  gap: 22px;
+  align-items: start;
+}
+
+.kp-nav-card,
+.kp-content-card,
+.kp-summary-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.kp-nav-card,
+.kp-summary-card {
+  position: sticky;
+  top: 16px;
+}
+
+.kp-nav-card h2,
+.kp-summary-card h2 {
+  margin: 0 0 14px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.kp-nav-list {
+  display: grid;
+  gap: 10px;
+}
+
+.kp-nav-item {
+  width: 100%;
+  margin: 0;
+  padding: 11px 12px;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: var(--text);
+  border: 1px solid transparent;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.kp-nav-item:hover {
+  background: var(--accent);
+  border-color: #bfd3e6;
+  color: var(--primary);
+}
+
+.kp-nav-item.active {
+  background: var(--accent);
+  border-color: #7ca2c6;
+  color: var(--primary);
+}
+
+.kp-nav-item.danger {
+  color: #b00020;
+}
+
+.kp-content-card .page.active {
+  margin: 0;
+  max-width: none;
+  box-shadow: none;
+  padding: 10px;
+}
+
+.kp-summary-card {
+  text-align: left;
+}
+
+.kp-empty-summary {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* alte feste Positionen im neuen Header deaktivieren */
+#release-info,
+#timer,
+#login-info,
+#user-actions {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  color: inherit;
+}
+
+#user-actions {
+  display: none !important;
+}
+
+/* Smartphone: Layout bleibt gleich, Seite wird horizontal scrollbar */
+@media (max-width: 980px) {
+  body {
+    overflow-x: auto;
+  }
+
+  .kp-hero {
+    min-width: 980px;
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  .kp-shell {
+    padding: 0 14px;
+  }
+}
