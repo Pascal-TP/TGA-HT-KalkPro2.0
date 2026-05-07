@@ -1325,16 +1325,20 @@ padding-left: 92px;
   font-weight: 700;
 }
 
-/* Seite 40: erste Spalte ausblenden, aber Raster behalten */
+/* Seite 40: finales Tabellenlayout */
 .kp-content-card #page-40 .row.summary-row,
 .kp-content-card #page-40 .row.table-header {
+  display: grid;
   grid-template-columns:
-    0
-    minmax(260px, 1fr)
-    62px
-    58px
-    100px
-    110px !important;
+    14px
+    minmax(300px, 1fr)
+    70px
+    60px
+    110px
+    120px !important;
+
+  gap: 10px;
+  align-items: center;
 }
 
 /* erste Spalte unsichtbar machen, aber NICHT display:none */
@@ -1394,4 +1398,29 @@ padding-left: 92px;
   max-width: none;
   margin: 14px 0 6px;
   padding: 10px 12px;
+}
+
+/* Seite 40 Kopfzeile feinjustieren */
+.kp-content-card #page-40 .table-header {
+  padding-left: 6px;
+  padding-right: 10px;
+}
+
+/* Positionszeilen */
+.kp-content-card #page-40 .summary-row {
+  padding-left: 6px;
+  padding-right: 10px;
+}
+
+/* Beschreibung */
+.kp-content-card #page-40 .col-b {
+  padding-right: 10px;
+}
+
+/* Zahlen-Spalten */
+.kp-content-card #page-40 .col-c,
+.kp-content-card #page-40 .col-d,
+.kp-content-card #page-40 .col-e,
+.kp-content-card #page-40 .col-f {
+  padding-left: 4px;
 }
