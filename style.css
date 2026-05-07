@@ -1552,3 +1552,8 @@ padding-left: 92px;
   font-size: 16px;
   padding: 15px 18px;
 }
+
+/* Rechte Auswahlkachel nur nach Login anzeigen */
+body:not(.is-logged-in) #kp-selection-summary {
+  display: none;
+}
