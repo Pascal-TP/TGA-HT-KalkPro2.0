@@ -1131,3 +1131,152 @@ body:not(.is-logged-in) .kp-nav-list {
 body.is-logged-in .kp-login-nav {
   display: none;
 }
+
+/* ================================
+   KALKPRO MITTELKACHEL KOMPAKTER
+================================ */
+
+.kp-content-card {
+  overflow: hidden;
+}
+
+.kp-content-card .page.active {
+  padding: 8px 10px;
+}
+
+/* Überschriften kompakter */
+.kp-content-card h2 {
+  margin-bottom: 14px;
+}
+
+.kp-content-card .title {
+  font-size: 22px;
+  margin: 22px 0 10px;
+}
+
+.kp-content-card .subtitle {
+  font-size: 17px;
+  margin: 14px 0 8px;
+}
+
+.kp-content-card .midtitle {
+  font-size: 15px;
+  margin: 10px 0 6px;
+}
+
+/* Beschreibungstexte nicht mehr wie große Tabellenzeilen */
+.kp-content-card .row.no-price,
+.kp-content-card .beschreibung-fett-row {
+  display: block;
+  padding: 6px 10px;
+  margin: 4px auto;
+  max-width: 92%;
+  min-height: unset;
+  line-height: 1.25;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.kp-content-card .row.no-price .col-a {
+  display: none;
+}
+
+.kp-content-card .row.no-price .col-b,
+.kp-content-card .beschreibung-fett-row .col-b {
+  display: block;
+  text-align: center;
+  padding: 0;
+}
+
+/* Tabellen kompakter */
+.kp-content-card .price-table {
+  max-width: 100%;
+  padding: 8px 0;
+  overflow: hidden;
+}
+
+.kp-content-card .row {
+  gap: 6px;
+  padding: 8px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+/* normale Preiszeilen ohne Bild */
+.kp-content-card .price-table .row,
+.kp-content-card .row {
+  grid-template-columns:
+    70px
+    minmax(150px, 1fr)
+    70px
+    72px
+    90px
+    100px;
+}
+
+/* Preiszeilen mit Bild: deutlich schmaler */
+.kp-content-card .with-pos-images .row {
+  grid-template-columns:
+    42px
+    90px
+    minmax(150px, 1fr)
+    58px
+    72px
+    86px
+    96px;
+  gap: 6px;
+}
+
+/* Bilder kleiner */
+.kp-content-card .header-img {
+  width: 90px;
+  max-height: 95px;
+  object-fit: contain;
+}
+
+.kp-content-card .pos-img {
+  max-width: 70px;
+  max-height: 58px;
+  object-fit: contain;
+}
+
+/* Beschreibung darf umbrechen */
+.kp-content-card .col-b {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Zahlen etwas kleiner und stabiler */
+.kp-content-card .col-c,
+.kp-content-card .col-d,
+.kp-content-card .col-e,
+.kp-content-card .col-f {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Mengenfeld kleiner */
+.kp-content-card input.menge-input {
+  width: 64px;
+  min-height: 38px;
+  padding: 6px;
+  font-size: 14px;
+}
+
+/* Tabellenkopf kompakter */
+.kp-content-card .table-header {
+  font-size: 12.5px;
+  padding: 6px 8px;
+  margin-bottom: 6px;
+}
+
+/* Gesamtbox kompakter */
+.kp-content-card .gesamt {
+  margin-top: 12px;
+  padding: 10px 12px;
+  font-size: 15px;
+}
