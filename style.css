@@ -1286,3 +1286,61 @@ padding-left: 92px;
   padding: 10px 12px;
   font-size: 15px;
 }
+
+/* ================================
+   SEITE 40 IM NEUEN LAYOUT
+================================ */
+
+.kp-content-card #page-40 {
+  max-width: none;
+  margin: 0;
+  padding: 10px;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Seite-40-Zeilen passend zur mittleren Kachel */
+.kp-content-card #page-40 .row {
+  grid-template-columns:
+    minmax(220px, 1fr)
+    80px
+    80px
+    110px
+    120px;
+  gap: 8px;
+  padding: 8px 10px;
+  align-items: center;
+}
+
+/* Tabellenkopf */
+.kp-content-card #page-40 .table-header {
+  background: var(--accent);
+  border: 1px solid #bfd3e6;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Beschreibung darf umbrechen */
+.kp-content-card #page-40 .row > div:first-child {
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Zahlen sauber rechts */
+.kp-content-card #page-40 .row > div:not(:first-child) {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Menge mittig */
+.kp-content-card #page-40 .row > div:nth-child(3) {
+  text-align: center;
+}
+
+/* Gesamtpreisbox kompakter */
+.kp-content-card #page-40 .gesamt {
+  max-width: none;
+  margin: 14px 0 6px;
+}
