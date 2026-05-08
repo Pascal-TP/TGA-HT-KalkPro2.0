@@ -1,6 +1,6 @@
 ﻿EDV-Nr./Bezeichnung;Beschreibung;Preiseinheit;Preis
-Titel;Dienstleistung;;
-Untertitel;Tiefenerder inkl. Leitungsverlegung & Anschluss an vorhandene Potentialausgleichsschiene;;
+Titel;;;
+Titel;Tiefenerder inkl. Leitungsverlegung & Anschluss an vorhandene Potentialausgleichsschiene;;
 Beschreibung_fett;Materialien:;;
 ;- Tiefenerder;;
 ;- Schutzleiter;;
@@ -11,13 +11,13 @@ Beschreibung_fett;Leistungen:;;
 ;;;
 ;Tiefenerder;€/Stk.;825,93
 ;;;
-Untertitel;Anmeldung Wärmepumpe;;
+Titel;Anmeldung Wärmepumpe;;
 Beschreibung_fett;Leistungen:;;
 ;- Erledigung aller notwendigen Anträge und Anmeldungen mit dem Energieversorger;;
 ;;;
 ;Anmeldung Wärmepumpe;€ pauschal;99
 ;;;
-Untertitel;Anmeldung der PV-Anlage bis 29,99 kWp;;
+Titel;Anmeldung der PV-Anlage bis 29,99 kWp;;
 Beschreibung_fett;Leistungen:;;
 ;- Erledigung aller notwendigen Anträge und Anmeldungen mit dem Energieversorger bis 29,99 kWp;;
 Beschreibung_fett;Nicht enthalten:;;
@@ -25,7 +25,7 @@ Beschreibung_fett;Nicht enthalten:;;
 ;;;
 ;Anmeldung der PV-Anlage bis 29,99 kWp;€ pauschal;350
 ;;;
-Untertitel;Registrierung im Marktstammdatenregister;;
+Titel;Registrierung im Marktstammdatenregister;;
 Beschreibung_fett;Leistungen:;;
 ;- Registrierung der PV-Anlage und des Batteriespeichers im Marktstammdatenregister;;
 ;;;
