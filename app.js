@@ -159,7 +159,7 @@ function applyFlowUI(pageId) {
     if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
   }
 
-if (pageId === "page-26") {
+  if (pageId === "page-26") {
     const normalBtn = document.getElementById("btnWeiter26Normal");
     const komplettBtn = document.getElementById("btnWeiter26Komplett");
 
