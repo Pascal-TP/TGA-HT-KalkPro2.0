@@ -3495,7 +3495,6 @@ function berechneGesamt10() {
 // -----------------------------
 
 function loadPage26() {
-  if (!isLoggedIn()) return;
 
   const container = document.getElementById("content-26");
   if (!container) return;
@@ -3508,36 +3507,10 @@ function loadPage26() {
 
       const lines = data.split("\n").slice(1);
       let html = "";
-
       let headerInserted = false;
 
       const gespeicherteWerte =
         JSON.parse(localStorage.getItem("page26Data") || "{}");
-
-      // Bild-Auflösung: 1..40 -> bildX.jpg (oder direkt Dateiname in CSV)
-      function resolvePosImg(colImg) {
-        const v = (colImg || "").trim();
-        if (!v) return "";
-        const n = parseInt(v, 10);
-        if (!isNaN(n) && n > 0) return `bild${n}.jpg`;
-        return v;
-      }
-
-      // Header (mit Bild links)
-      function renderHeader26(imgSrc) {
-        return `
-          <div class="row table-header">
-            <div class="header-img-cell">
-              ${imgSrc ? `<img src="${imgSrc}" class="header-img" alt="Bild">` : ""}
-            </div>
-            <div>Beschreibung</div>
-            <div>Einheit</div>
-            <div style="text-align:center;">Menge</div>
-            <div style="text-align:right;">Preis / Einheit</div>
-            <div style="text-align:right;">Positionsergebnis</div>
-          </div>
-        `;
-      }
 
       lines.forEach((line, index) => {
         if (!line.trim()) return;
@@ -3547,84 +3520,84 @@ function loadPage26() {
         const colB = cols[1]?.trim();
         const colC = cols[2]?.trim();
         const colD = cols[3]?.trim();
-        const colImg = cols[4]?.trim(); // <-- NEU: 5. Spalte Bild
 
-        // ====== Abschnittstrenner: Header soll später wieder kommen ======
         if (colA === "Titel") {
           html += `<div class="title">${colB}</div>`;
-          headerInserted = false;
           return;
         }
         if (colA === "Untertitel") {
           html += `<div class="subtitle">${colB}</div>`;
-          headerInserted = false;
           return;
         }
         if (colA === "Zwischentitel") {
           html += `<div class="midtitle">${colB}</div>`;
-          headerInserted = false;
           return;
         }
-
-        // Beschreibung_fett (wie bei Seite 20 sauber auf Beschreibung-Spalte ausgerichtet)
         if (colA === "Beschreibung_fett") {
           html += `
-            <div class="row beschreibung-fett-row">
-              <div class="col-a"></div>
-              <div class="col-b beschreibung-fett" style="grid-column: 2 / 7;">${colB}</div>
-            </div>
-          `;
-          headerInserted = false;
+    <div class="row beschreibung-fett-row">
+      <div class="col-a"></div>
+      <div class="col-b beschreibung-fett">${colB}</div>
+      <div class="col-c"></div>
+      <div class="col-d"></div>
+      <div class="col-e"></div>
+      <div class="col-f"></div>
+    </div>
+  `;
           return;
         }
 
-        const preis = parseFloat((colD || "").replace(",", "."));
-        const preisVorhanden = !isNaN(preis);
+        const preis = parseFloat(colD?.replace(",", "."));
+        if (!isNaN(preis)) {
 
-        if (preisVorhanden) {
-
-          // Bild aus 5. Spalte
-          const imgSrc = resolvePosImg(colImg);
-
-          // Header + Bild DIREKT vor dieser Position
-          html += renderHeader26(imgSrc);
-          headerInserted = true;
+          if (!headerInserted) {
+            html += `
+          <div class="row table-header">
+            <div class="header-img-cell">
+          <img src="bild24.jpg" class="header-img" alt="Bild">
+        </div>
+            <div>Beschreibung</div>
+            <div>Einheit</div>
+            <div style="text-align:center;">Menge</div>
+            <div style="text-align:right;">Preis / Einheit</div>
+            <div style="text-align:right;">Positionsergebnis</div>
+          </div>
+        `;
+            headerInserted = true;
+          }
 
           const menge = gespeicherteWerte[index] || 0;
 
           html += `
-            <div class="row">
-              <div class="col-a">${colA}</div>
-              <div class="col-b">${colB}</div>
-              <div class="col-c">${colC}</div>
+                        <div class="row">
+                            <div class="col-a">${colA}</div>
+                            <div class="col-b">${colB}</div>
+                            <div class="col-c">${colC}</div>
 
-              <input class="menge-input"
-                     type="number" min="0" step="any"
-                     value="${menge}"
-                     oninput="calcRow26(this, ${preis}, ${index})">
+                            <input class="menge-input"
+                                   type="number" min="0" step="any"
+                                   value="${menge}"
+                                   oninput="calcRow26(this, ${preis}, ${index})">
 
-              <div class="col-d">
-                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
-              </div>
+                            <div class="col-d">
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
+                            </div>
 
-              <div class="col-e">0,00 €</div>
-            </div>
-          `;
+                            <div class="col-e">0,00 €</div>
+                        </div>`;
         } else {
           html += `
-            <div class="row no-price">
-              <div class="col-a">${colA}</div>
-              <div class="col-b" style="grid-column: 2 / 7;">${colB}</div>
-            </div>
-          `;
-          headerInserted = false;
+                        <div class="row no-price">
+                            <div class="col-a">${colA}</div>
+                            <div class="col-b" style="grid-column: 2 / 7;">${colB}</div>
+                        </div>`;
         }
       });
 
-      html += `<div id="gesamtSumme26" class="gesamt">Gesamtsumme: 0,00 €</div>`;
-      //     html += `<div id="gesamtSumme26Rabatt" class="gesamt rabatt" data-rabatt="angebot">
-      //      Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
-      //   </div>`;
+      html += `<div id="gesamtSumme10" class="gesamt">Gesamtsumme: 0,00 €</div>`;
+      //          html += `<div id="gesamtSumme10Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+      //        Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+      //       </div>`;
 
       container.innerHTML = html;
       berechneGesamt26();
@@ -4052,21 +4025,21 @@ function loadPage25() {
         if (!isNaN(preis)) {
 
 
-          if (!headerInserted) {
-            html += `
-          <div class="row table-header">
-            <div class="header-img-cell">
-        <img src="xxx.jpg" class="header-img" alt="Bild">
-        </div>
-            <div>Beschreibung</div>
-            <div>Einheit</div>
-            <div style="text-align:center;">Menge</div>
-            <div style="text-align:right;">Preis / Einheit</div>
-            <div style="text-align:right;">Positionsergebnis</div>
-          </div>
-        `;
-            headerInserted = true;
-          }
+          //    if (!headerInserted) {
+          //      html += `
+          //    <div class="row table-header">
+          //      <div class="header-img-cell">
+          //  <img src="xxx.jpg" class="header-img" alt="Bild">
+          //  </div>
+          //     <div>Beschreibung</div>
+          //     <div>Einheit</div>
+          //     <div style="text-align:center;">Menge</div>
+          //     <div style="text-align:right;">Preis / Einheit</div>
+          //     <div style="text-align:right;">Positionsergebnis</div>
+          //   </div>
+          // `;
+          //     headerInserted = true;
+          //   }
 
           const menge = gespeicherteWerte[index] || 0;
 
