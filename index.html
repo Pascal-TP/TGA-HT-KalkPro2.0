@@ -55,7 +55,7 @@
         <button class="kp-nav-item sub sub-2" data-page="page-14" onclick="showPage('page-14')">Wechselrichter „strang“</button>
         <button class="kp-nav-item sub sub-2" data-page="page-14-2" onclick="showPage('page-14-2')">Wechselrichter „hybrid“</button>
         <button class="kp-nav-item sub" data-page="page-21" onclick="showPage('page-21')">Zubehör Wechselrichter</button>
-        <button class="kp-nav-item sub" data-page="page-10" onclick="showPage('page-10')">Speicher</button>
+        <button class="kp-nav-item sub" data-page="page-10" onclick="showPage('page-10-1')">Speicher</button>
         <button class="kp-nav-item sub" data-page="page-18" onclick="showPage('page-18')">Wallbox</button>
         <button class="kp-nav-item sub" data-page="page-20" onclick="showPage('page-20')">Zählerschrank</button>
         <button class="kp-nav-item sub sub-2" data-page="page-22" onclick="showPage('page-22')">Extras Zählerschrank</button>
@@ -647,7 +647,7 @@
                 <!-- Auswahlbuttons untereinander -->
                 <div>
                     <button class="submenu-button" onclick="showPage('page-11')">Wechselrichter</button><br>
-                    <button class="submenu-button" onclick="showPage('page-10')">Speicher</button><br>
+                    <button class="submenu-button" onclick="showPage('page-10-1')">Speicher</button><br>
                     <button class="submenu-button" onclick="showPage('page-18')">Wallbox</button><br>
                     <button class="submenu-button" onclick="showPage('page-20')">Zählerschrank</button><br>
                 </div>
@@ -874,7 +874,7 @@
 
                 <div class="button-bar">
                     <button id="btnWeiter21Normal" onclick="direktZumAngebot()">Direkt zur Ausgabeseite</button>
-                    <button id="btnWeiter21Komplett" class="btn-komplett hidden"
+                    <button id="btnWeiter21Komplett" class="btn-komplett hidden" onclick="showPage('page-10-1')">Weiter</button>
                         onclick="showPage('page-10')">Weiter</button>
                 </div>
             </div>
@@ -906,19 +906,46 @@
                 </div>
             </div>
 
-            <!-- SEITE 10: Speicher -->
-            <div class="page" id="page-10">
-                <h2>Speicher</h2>
+             <!-- SEITE 10: Speicher BYD-->
+    <div class="page" id="page-10">
+        <h2>Speicher</h2>
 
-                <div id="content-10" class="price-table"></div>
+        <div id="content-10" class="price-table"></div>
 
-                <div class="button-bar">
-                    <button id="btnWeiter10Normal" onclick="direktZumAngebot()">Direkt zur Ausgabeseite</button>
-                    <button id="btnWeiter10Komplett" class="btn-komplett hidden"
-                        onclick="showPage('page-18')">Weiter</button>
+        <div class="button-bar">
+            <button onclick="showPage('page-4')">Zurück zum Hauptmenü</button>
+            <button id="btnWeiter10Normal" onclick="direktZumAngebot()">Direkt zur Ausgabeseite</button>
+            <button id="btnWeiter10Komplett" class="btn-komplett hidden" onclick="showPage('page-20')">Weiter</button>
 
-                </div>
-            </div>
+        </div>
+    </div>
+
+<!-- SEITE 26:  Speicher Fronius-->
+    <div class="page" id="page-26">
+        <h2>Speicher Fronius</h2>
+
+        <div id="content-26" class="price-table"></div>
+
+        <div class="button-bar">
+            <button onclick="showPage('page-4')">Zurück zum Hauptmenü</button>
+            <button id="btnWeiter26Normal" onclick="direktZumAngebot()">Direkt zur Ausgabeseite</button>
+            <button id="btnWeiter26Komplett" class="btn-komplett hidden" onclick="showPage('page-20')">Weiter</button>
+        </div>
+    </div>
+
+<!-- SEITE 10.1: MENÜ Speicher -->
+    <div class="page" id="page-10-1">
+        <h2>Menü Speicher</h2>
+
+        <div>
+            <button onclick="showPage('page-26')">Typ "Fronius"</button>
+            <button onclick="showPage('page-10')">Typ "BYD"</button>            
+        </div>
+
+        <br>
+        <br>
+    </div>
+
 
             <!-- SEITE 11: MENÜ Wechselrichter -->
             <div class="page" id="page-11">
