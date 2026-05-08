@@ -74,7 +74,7 @@
                     <button class="kp-nav-item sub sub-2" data-page="page-22" onclick="showPage('page-22')">Extras
                         Zählerschrank</button>
                 </div>
-
+                <button class="kp-nav-item" data-page="page-25" onclick="showPage('page-25')">Dienstleistungen</button>
                 <button class="kp-nav-item" data-page="page-15" onclick="showPage('page-15')">Versicherung</button>
                 <button class="kp-nav-item" data-page="page-14-1"
                     onclick="showPage('page-14-1')">Downloadbereich</button>
@@ -903,7 +903,7 @@
                 <div id="content-22" class="price-table"></div>
 
                 <div class="button-bar">
-                    <button id="btnWeiter22Normal" onclick="direktZumAngebot()">Direkt zur Ausgabeseite</button>
+                    <button id="btnWeiter22Normal" onclick="showPage('page-25')">Weiter</button>
                     <button id="btnWeiter22Komplett" class="btn-komplett hidden" onclick="direktZumAngebot()">Direkt zum
                         Angebot</button>
                 </div>
@@ -1005,25 +1005,18 @@
                 </div>
             </div>
 
-            <!-- SEITE 25:  -->
+            <!-- SEITE 25:  Dienstleistungen-->
             <div class="page" id="page-25">
-                <h2> </h2>
+                <h2>Dienstleistungen</h2>
 
                 <div id="content-25" class="price-table"></div>
 
                 <div class="button-bar">
-                    <button onclick="showPage('page-20')">Weiter</button>
-                    <button onclick="direktZumAngebot()">Direkt zur Ausgabeseite</button>
+                    <button id="btnWeiter22Normal" onclick="direktZumAngebot()">Direkt zur Ausgabeseite</button>
+                    <button id="btnWeiter22Komplett" class="btn-komplett hidden" onclick="direktZumAngebot()">Direkt zum
+                        Angebot</button>
+
                 </div>
-            </div>
-
-            <!-- SEITE 26:  -->
-            <div class="page" id="page-26">
-                <h2> </h2>
-
-                <button onclick="showPage('page-27')">Handelsmarke</button>
-                <button onclick="showPage('page-28')">Uponor</button>
-
             </div>
 
             <!-- SEITE 29:  -->
