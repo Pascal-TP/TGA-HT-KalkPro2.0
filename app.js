@@ -2114,6 +2114,7 @@ function clearInputs() {
   //if (p40r) p40r.innerText = "Gesamtpreis abzgl. SHK-Rabatt (15%): 0,00 €";
 
   // zurück zu "page-3"
+  updateKpSelectionSummary();
   showPage("page-3");
 }
 
