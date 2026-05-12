@@ -275,7 +275,10 @@ function getWrRecommendationText(modules) {
   if (modules <= 23) return "10.0";
   if (modules <= 28) return "12.0";
   if (modules <= 33) return "15.0";
-  return "15.0"; // >33: konservativ (oder null, wenn du lieber warnen willst)
+  if (modules <= 44) return "20.0";
+  if (modules <= 55) return "25.0";
+  if (modules <= 66) return "30.0";
+  return "30.0";
 }
 
 // -----------------------------
@@ -289,8 +292,8 @@ function extractWrSizeFromRow(rowEl) {
   // Normalisieren: 3,0 -> 3.0
   const desc = descRaw.replace(",", ".");
 
-  // Match: 3.0 / 3 / 10.0 / 10 / 12.0 / 12 / 15.0 / 15
-  const m = desc.match(/(?:^|[^0-9])(3(?:\.0)?|4(?:\.0)?|5(?:\.0)?|6(?:\.0)?|8(?:\.0)?|10(?:\.0)?|12(?:\.0)?|15(?:\.0)?)(?![0-9])/);
+  // Match: 3.0 / 3 / 10.0 / 10 / 12.0 / 12 / 15.0 / 15 / 20.0 / 20 / 25.0 / 25 / 30.0 / 30
+  const m = desc.match(/(?:^|[^0-9])(3(?:\.0)?|4(?:\.0)?|5(?:\.0)?|6(?:\.0)?|8(?:\.0)?|10(?:\.0)?|12(?:\.0)?|15(?:\.0)?|20(?:\.0)?|25(?:\.0)?|30(?:\.0)?)(?![0-9])/);
   if (!m) return null;
 
   // Immer als "x.0" zurückgeben
@@ -1035,7 +1038,7 @@ async function exportLoginLog() {
   let csv = "time;email;event\n";
   snap.forEach(d => {
     const x = d.data();
-    const time = x.time?.toDate ? x.time.toDate().toISOString() : "";
+    const time = x.time?.toDate ? x.time.toDate().toLocaleString("de-DE") : "";
     csv += `${time};${x.email || ""};${x.event || ""}\n`;
   });
 
