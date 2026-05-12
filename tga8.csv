@@ -1,8 +1,8 @@
 ﻿EDV-Nr./Bezeichnung;Beschreibung;Preiseinheit;Preis
-Titel;Montage und Lieferung Fronius Wallbox;;
+Titel;Montage und Lieferung Fronius Wallbox Wattpilot Flex Home & Pro;;
 Untertitel;…ohne MID-Zähler;;
 Beschreibung_fett;Materialien:;;
-;- Fronius Wallbox;;
+;- Fronius Wallbox Home;;
 ;- Leitungen und Verlegesystem;;
 ;- Klein- und Sicherungsmaterial;;
 Beschreibung_fett;Leistungen:;;
@@ -10,13 +10,12 @@ Beschreibung_fett;Leistungen:;;
 ;- Leitungsverlegung zum Standort der Wallbox bis max. 20 m (Aufputz);;
 ;- Inbetriebnahme;;
 ;;;
-;11,0 kW Wattpilot Home (Standard) …ohne MID-Zähler;€/Stk.;9999,99
-;22,0 kW Wattpilot Home (Standard) …ohne MID-Zähler;€/Stk.;9999,99
+;11,0 kW Wattpilot Home 11 C6;€/Stk.;1482,21
+;22,0 kW Wattpilot Home 22 C6;€/Stk.;1547,27
 ;;;
 Untertitel;…mit MID-Zähler;;
 Beschreibung_fett;Materialien:;;
-;- Fronius Wallbox;;
-;- MID-Zähler Eltako;;
+;- Fronius Wallbox Pro;;
 ;- Leitungen und Verlegesystem;;
 ;- Klein- und Sicherungsmaterial;;
 Beschreibung_fett;Leistungen:;;
@@ -24,4 +23,5 @@ Beschreibung_fett;Leistungen:;;
 ;- Leitungsverlegung zum Standort der Wallbox bis max. 20 m (Aufputz);;
 ;- Inbetriebnahme;;
 ;;;
-;11,0 kW Wattpilot Home (Standard) …mit MID-Zähler;€/Stk.;9999,99
+;11,0 kW Wattpilot Pro 11 C6E;€/Stk.;1653,93
+;22,0 kW Wattpilot Pro 22 C6E;€/Stk.;1682,8
