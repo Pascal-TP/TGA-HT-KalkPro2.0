@@ -2097,7 +2097,7 @@ function clearInputs() {
   // if (sum13) sum13.innerText = "Gesamtsumme Angebot: 0,00 €";
 
   // Flags zurücksetzen, damit Seiten neu aus CSV geladen werden
-  page14Loaded = false;
+  // page14Loaded = false;
 
   // Seite 14.3 hat kein Flag, daher reicht Container leeren
 
