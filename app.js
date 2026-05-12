@@ -344,11 +344,16 @@ function applyWrRecommendation(pageId) {
 
     // Nur ausgrauen, wenn wir eine WR-Größe überhaupt erkennen konnten
     const shouldDim = (size && size !== reco);
-    hasMismatch = true;
     row.classList.toggle("wr-dimmed", shouldDim);
 
-    // falls schon Wert > 0 eingetragen und dimmed -> Hinweis anzeigen
     const val = parseFloat(String(inp.value).replace(",", ".")) || 0;
+
+    if (shouldDim && val > 0) {
+      hasMismatch = true;
+    }
+
+    // falls schon Wert > 0 eingetragen und dimmed -> Hinweis anzeigen
+
     if (shouldDim && val > 0) {
       const warn = document.createElement("div");
       warn.className = "wr-warn";
