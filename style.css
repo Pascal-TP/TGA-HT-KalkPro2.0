@@ -544,7 +544,7 @@ button.btn-komplett:active {
   border: 1px solid rgba(47, 111, 237, 0.35);
 }
 
-.wr-dimmed {
+.wr-dimmed > :not(.wr-warn) {
   opacity: 0.35;
   filter: grayscale(1);
 }
@@ -552,15 +552,11 @@ button.btn-komplett:active {
 .wr-warn {
   grid-column: 1 / -1;
   text-align: left;
-  color: #c40000;
-  font-weight: 700;
-  margin-top: 4px;
-}
-
-.wr-dimmed .wr-warn{
+  color: #c40000 !important;
+  font-weight: 800;
+  margin-top: 6px;
   opacity: 1 !important;
   filter: none !important;
-  color: #c40000 !important;
 }
 
 /* =========================================
