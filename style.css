@@ -555,9 +555,12 @@ button.btn-komplett:active {
   color: #c40000;
   font-weight: 700;
   margin-top: 4px;
+}
 
+.wr-dimmed .wr-warn{
   opacity: 1 !important;
   filter: none !important;
+  color: #c40000 !important;
 }
 
 /* =========================================
