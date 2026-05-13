@@ -26,25 +26,25 @@ body {
 }
 
 .logo {
-    margin: 150px auto 30px;
-    display: block;
-    width: 50%;
-    max-width: 400px;
+  margin: 150px auto 30px;
+  display: block;
+  width: 50%;
+  max-width: 400px;
 }
 
 .Bild_Versicherung {
-    margin: 30px auto;
-    display: block;
-    width: 50%;
-    max-width: 150px;
+  margin: 30px auto;
+  display: block;
+  width: 50%;
+  max-width: 150px;
 }
 
 .page {
-    display: none;
+  display: none;
 }
 
 .page.active {
-    display: block;
+  display: block;
 }
 
 /* Ohne JS (html hat keine Klasse "js") sollen KEINE Seiten sichtbar sein */
@@ -54,173 +54,219 @@ html:not(.js) .page.active {
 }
 
 input {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;   
-    width: 250px;
-    background: #fff6d5;
-    border: 1px solid #ccc;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 250px;
+  background: #fff6d5;
+  border: 1px solid #ccc;
 }
 
 button {
-    background: #4dad32;
-    color: black;
-    border: none;
-    padding: 12px 22px;
-    margin: 6px;
-    cursor: pointer;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: 0.2s ease;
+  background: #4dad32;
+  color: black;
+  border: none;
+  padding: 12px 22px;
+  margin: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.2s ease;
 }
 
 button:hover {
-    background: #6ff77f;
-    transform: translateY(-1px);
+  background: #6ff77f;
+  transform: translateY(-1px);
 }
 
 button:active {
-    transform: translateY(0px);
+  transform: translateY(0px);
 }
 
 .error {
-    color: darkred;
-    margin: 10px;
+  color: darkred;
+  margin: 10px;
 }
 
 .hint {
-    max-width: 800px;
-    margin: 20px auto;
-    font-size: 14px;
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 14px;
 }
 
 #release-info {
-    position: fixed;
-    top: 10px;
-    right: 15px;
-    font-size: 14px;
-    text-align: right;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  font-size: 14px;
+  text-align: right;
 }
 
 #timer {
-    position: fixed;
-    top: 30px;
-    right: 15px;
-    font-size: 14px;
-    text-align: right;
+  position: fixed;
+  top: 30px;
+  right: 15px;
+  font-size: 14px;
+  text-align: right;
 }
 
 #login-info {
-    position: fixed;
-    top: 50px;              /* unter dem Timer */
-    right: 15px;
-    font-size: 14px;
-    text-align: right;
+  position: fixed;
+  top: 50px;
+  /* unter dem Timer */
+  right: 15px;
+  font-size: 14px;
+  text-align: right;
 }
 
 /* ================================
    TITEL / UNTERTITEL / ZWISCHENTITEL – global
 ================================ */
-.title { text-align: center;font-weight: bold; font-size: 24px; margin-top: 25px; }
-.subtitle { text-align: center;font-weight: bold; font-size: 18px; margin-top: 20px; }
-.midtitle { text-align: center;font-weight: bold; font-size: 16px; margin-top: 15px; }
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 25px;
+}
+
+.subtitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.midtitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 15px;
+}
 
 .beschreibung-fett {
   font-weight: 700;
 }
 
 .price-table {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
 .price-table .row {
-    display: grid;
-    grid-template-columns: 160px 4fr 100px 100px 120px 120px;
-    gap: 15px;
-    margin-bottom: 12px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 160px 4fr 100px 100px 120px 120px;
+  gap: 15px;
+  margin-bottom: 12px;
+  align-items: center;
 }
 
-.price-table .col-a { text-align: left; font-weight: bold; }
-.price-table .col-b { text-align: left; padding-left: 5px; }
+.price-table .col-a {
+  text-align: left;
+  font-weight: bold;
+}
+
+.price-table .col-b {
+  text-align: left;
+  padding-left: 5px;
+}
+
 .price-table .col-c,
 .price-table .col-d,
-.price-table .col-e { text-align: right; }
-.price-table .col-f { text-align: right; }
+.price-table .col-e {
+  text-align: right;
+}
+
+.price-table .col-f {
+  text-align: right;
+}
 
 
 .price-table input.menge-input {
-    background-color: #fff8dc;
-    padding: 5px;
-    width: 80px;
-    text-align: center;
+  background-color: #fff8dc;
+  padding: 5px;
+  width: 80px;
+  text-align: center;
 }
+
 /* ================================
    Smartphone – global für alle Seiten
 ================================ */
 @media (max-width: 600px) {
-    .row { display: block; }
+  .row {
+    display: block;
+  }
 
-    .row > div,
-    .row > input {
-        display: block;
-        width: 100%;
-        text-align: left;
-        margin-bottom: 5px;
-    }
+  .row>div,
+  .row>input {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+  }
 
-    input.menge-input { width: 100%; }
+  input.menge-input {
+    width: 100%;
+  }
 }
 
 #page-40 {
-    max-width: 1100px;
-    margin: auto;
-    padding: 30px;
-    background: white;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
+
 .row {
-    display: grid;
-    grid-template-columns: 
-        80px       /* Pos */
-        1.5fr      /* Beschreibung */
-        1fr        /* Zusatz */
-        100px      /* Menge */
-        120px      /* EP */
-        120px;     /* Gesamt */
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 6px;
+  display: grid;
+  grid-template-columns:
+    80px
+    /* Pos */
+    1.5fr
+    /* Beschreibung */
+    1fr
+    /* Zusatz */
+    100px
+    /* Menge */
+    120px
+    /* EP */
+    120px;
+  /* Gesamt */
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 6px;
 }
+
 .menge-input {
-    width: 80px;
-    text-align: right;
+  width: 80px;
+  text-align: right;
 }
 
 /* ================================
    Allgemeine Hinweise (tga12.csv)
 ================================ */
 #hinweise-content {
-    text-align: left;
+  text-align: left;
 }
 
 #hinweise-content .title,
 #hinweise-content .subtitle,
 #hinweise-content .midtitle {
-    text-align: left;
+  text-align: left;
 }
 
 #hinweise-content .hinweis-row {
-    text-align: left;
-    margin: 6px 0;
-    line-height: 1.5;
+  text-align: left;
+  margin: 6px 0;
+  line-height: 1.5;
 }
+
 #hinweise-content {
-    max-width: 1000px;
-    margin: 30px auto;
+  max-width: 1000px;
+  margin: 30px auto;
 }
+
 .hidden {
   display: none !important;
 }
@@ -268,13 +314,22 @@ body.app-locked #page-hinweis.active {
 @media print {
 
   /* alles ausblenden */
-  .page { display: none !important; }
+  .page {
+    display: none !important;
+  }
 
   /* nur Seite 40 drucken */
-  #page-40 { display: block !important; }
+  #page-40 {
+    display: block !important;
+  }
 
   /* Buttons/Nav etc. ausblenden */
-  button, .nav, #timer, #login-info, #release-info, #user-actions {
+  button,
+  .nav,
+  #timer,
+  #login-info,
+  #release-info,
+  #user-actions {
     display: none !important;
   }
 }
@@ -287,38 +342,40 @@ body.app-locked #page-hinweis.active {
   padding-bottom: 6px;
 }
 
-.table-header > div {
+.table-header>div {
   opacity: 0.9;
 }
 
-.header-img-cell{
-  display:flex;
-  align-items:center;
+.header-img-cell {
+  display: flex;
+  align-items: center;
 }
 
-.header-img{
-  width: 140px;     /* anpassen */
+.header-img {
+  width: 140px;
+  /* anpassen */
   height: auto;
-  display:block;
+  display: block;
 }
 
-.with-pos-images .row{
-  display:grid;
-  grid-template-columns: 60px 160px 4fr 100px 100px 120px 120px; /* Bild + 6 Spalten */
+.with-pos-images .row {
+  display: grid;
+  grid-template-columns: 60px 160px 4fr 100px 100px 120px 120px;
+  /* Bild + 6 Spalten */
   gap: 15px;
-  align-items:center;
+  align-items: center;
 }
 
-.pos-img-cell{
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.pos-img-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.pos-img{
+.pos-img {
   max-height: 42px;
   width: auto;
-  display:block;
+  display: block;
 }
 
 
@@ -332,7 +389,7 @@ body.pdf-mode #release-info {
 }
 
 /* Das „normale“ Logo oben außerhalb von Seite 40 im PDF ausblenden */
-body.pdf-mode > img.logo {
+body.pdf-mode>img.logo {
   display: none !important;
 }
 
@@ -353,13 +410,14 @@ body.pdf-mode > img.logo {
 .loader {
   position: fixed;
   inset: 0;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255, 255, 255, 0.85);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 9999;
 }
+
 .loader.hidden {
   display: none !important;
 }
@@ -381,9 +439,14 @@ body.pdf-mode > img.logo {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
-body.pdf-mode #loader40 { display: none !important; }
+
+body.pdf-mode #loader40 {
+  display: none !important;
+}
 
 select {
   display: block;
@@ -393,9 +456,11 @@ select {
   background: #fff6d5;
   border: 1px solid #ccc;
 }
+
 #user-menu-wrapper {
   position: fixed;
-  top: 70px;          /* unter Release + Timer */
+  top: 70px;
+  /* unter Release + Timer */
   right: 15px;
   text-align: right;
   z-index: 1000;
@@ -416,7 +481,8 @@ select {
 
 #user-actions {
   position: fixed;
-  top: 70px;        /* unterhalb von login-info */
+  top: 70px;
+  /* unterhalb von login-info */
   right: 15px;
   text-align: right;
   z-index: 1000;
@@ -429,37 +495,45 @@ select {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
+
 #user-action-select option[value="logout"] {
   font-weight: 700;
-  color: #b00020; /* dezentes Rot */
+  color: #b00020;
+  /* dezentes Rot */
 }
+
 .start-slogan {
   margin-top: 20px;
   font-size: 20px;
   font-weight: 500;
   color: #333;
 }
+
 /* ================================
    KOMPLETT-FLOW BUTTONS (BLAU)
 ================================ */
 button.btn-komplett {
-  background: #2f6fed;       /* Blau */
+  background: #2f6fed;
+  /* Blau */
   color: white;
 }
 
 button.btn-komplett:hover {
-  background: #5a8cff;       /* helleres Blau */
+  background: #5a8cff;
+  /* helleres Blau */
   transform: translateY(-1px);
 }
 
 button.btn-komplett:active {
-  background: #1f55c9;       /* dunkler beim Klick */
+  background: #1f55c9;
+  /* dunkler beim Klick */
   transform: translateY(0px);
 }
+
 /* ================================
    WR Empfehlung / Ausgrauen / Warnung
 ================================ */
-.wr-reco-box{
+.wr-reco-box {
   max-width: 1100px;
   margin: 10px auto 18px auto;
   padding: 12px 14px;
@@ -467,20 +541,23 @@ button.btn-komplett:active {
   text-align: left;
   font-weight: 600;
   background: #eaf2ff;
-  border: 1px solid rgba(47,111,237,0.35);
+  border: 1px solid rgba(47, 111, 237, 0.35);
 }
 
-.wr-dimmed{
+.wr-dimmed {
   opacity: 0.35;
   filter: grayscale(1);
 }
 
-.wr-warn{
+.wr-warn {
   grid-column: 1 / -1;
   text-align: left;
-  color: darkred;
+  color: #c40000;
   font-weight: 700;
   margin-top: 4px;
+
+  opacity: 1 !important;
+  filter: none !important;
 }
 
 /* =========================================
@@ -543,91 +620,101 @@ body.pdf-mode #page-40 .hinweis-row {
 }
 
 /* === Legal Links (Datenschutz/Impressum) === */
-.legal-links{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:10px;
+.legal-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   margin: 12px 0;
   flex-wrap: wrap;
 }
 
-.legal-link{
+.legal-link {
   color: #0b2a4a;
   text-decoration: underline;
   font-weight: 600;
   cursor: pointer;
 }
 
-.legal-link:hover{
+.legal-link:hover {
   opacity: 0.85;
 }
 
-.legal-sep{
+.legal-sep {
   opacity: 0.6;
 }
 
 /* === Checkbox-Block zentriert, Text darin links === */
-.ack-row{
-  display:flex;
-  justify-content:center;
+.ack-row {
+  display: flex;
+  justify-content: center;
   margin: 12px 0;
 }
 
 /* Checkbox + Text kompakt */
-.ack-label{
+.ack-label {
   display: inline-flex;
   align-items: center;
-  gap: 4px;                /* kleiner */
+  gap: 4px;
+  /* kleiner */
   max-width: 900px;
   line-height: 1.2;
 }
 
 /* Text einzeilig */
-.ack-label span{
+.ack-label span {
   white-space: nowrap;
 }
 
 /* Checkbox-Abstand kontrollieren */
-.ack-label input[type="checkbox"]{
-  margin: 0;               /* Standard-Margins entfernen */
-  margin-right: 4px;       /* definierter Abstand */
-  transform: translateY(1px); /* optische Feinjustierung */
+.ack-label input[type="checkbox"] {
+  margin: 0;
+  /* Standard-Margins entfernen */
+  margin-right: 4px;
+  /* definierter Abstand */
+  transform: translateY(1px);
+  /* optische Feinjustierung */
 }
 
 /* Optional: minimal kleiner machen (wirkt kompakter) */
-.ack-label input[type="checkbox"]{
+.ack-label input[type="checkbox"] {
   width: 16px;
   height: 16px;
 }
+
 /* auf sehr kleinen Displays darf es umbrechen, sonst wird es zu breit */
-@media (max-width: 420px){
-  .ack-label span{ white-space: normal; }
+@media (max-width: 420px) {
+  .ack-label span {
+    white-space: normal;
+  }
 }
 
 /* === Box-Layout für Datenschutz/Impressum === */
-.box{
+.box {
   max-width: 1000px;
   margin: 18px auto;
   background: #ffffff;
   padding: 18px 22px;
   border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
   line-height: 1.35;
 }
 
 /* === Pseudo-disabled Button (klickbar, zeigt aber "gesperrt") === */
-button.btn-disabled{
+button.btn-disabled {
   opacity: 0.45;
   cursor: not-allowed;
   transform: none !important;
 }
-button.btn-disabled:hover{
-  background: #4dad32; /* hover-effekt aus */
+
+button.btn-disabled:hover {
+  background: #4dad32;
+  /* hover-effekt aus */
   transform: none !important;
 }
+
 /* Datenschutz-Überschriften wirklich fett */
-#page-privacy h3{
+#page-privacy h3 {
   font-weight: 800 !important;
   margin: 16px 0 8px;
 }
@@ -640,8 +727,8 @@ button.btn-disabled:hover{
 
 /* Pflichtfelder */
 .required {
-    border: 2px solid #e74c3c;
-    background-color: #fff6f6;
+  border: 2px solid #e74c3c;
+  background-color: #fff6f6;
 }
 
 .modal {
@@ -652,7 +739,7 @@ button.btn-disabled:hover{
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
@@ -668,9 +755,11 @@ button.btn-disabled:hover{
   text-align: center;
   border-radius: 6px;
 }
+
 .modal-content button {
   cursor: pointer;
 }
+
 .flow-indicator {
   display: inline-block;
   margin-left: 10px;
@@ -703,7 +792,7 @@ button.btn-disabled:hover{
   display: block;
   width: 260px;
   max-width: 70%;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 14px;
   padding: 10px;
   box-shadow: var(--shadow);
@@ -838,11 +927,11 @@ button:active {
 #timer,
 #login-info,
 #user-actions {
-  background: rgba(255,255,255,0.88);
+  background: rgba(255, 255, 255, 0.88);
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   padding: 6px 10px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
 .price-table {
@@ -932,10 +1021,12 @@ button:active {
 
 .kp-hero .logo {
   margin: 0;
-  width: 420px;          /* größer */
+  width: 420px;
+  /* größer */
   max-width: 100%;
   border-radius: 14px;
-  padding: 6px 10px;     /* weniger Innenabstand */
+  padding: 6px 10px;
+  /* weniger Innenabstand */
   box-shadow: none;
 }
 
@@ -1158,19 +1249,19 @@ body.is-logged-in .kp-login-nav {
   font-size: 22px;
   margin: 22px 0 10px;
   text-align: left;
-padding-left: 92px;
+  padding-left: 92px;
 }
 
 .kp-content-card .subtitle {
   font-size: 17px;
   margin: 14px 0 8px;
- }
+}
 
 .kp-content-card .midtitle {
   font-size: 15px;
   margin: 10px 0 6px;
   text-align: left;
-padding-left: 92px;
+  padding-left: 92px;
 }
 
 /* Beschreibungstexte nicht mehr wie große Tabellenzeilen */
@@ -1196,7 +1287,8 @@ padding-left: 92px;
 .kp-content-card .beschreibung-fett-row .col-b {
   display: block;
   text-align: left;
-  padding-left: 92px;   /* ungefähr Bildbreite */
+  padding-left: 92px;
+  /* ungefähr Bildbreite */
   padding-right: 12px;
   line-height: 1.35;
 }
@@ -1220,24 +1312,13 @@ padding-left: 92px;
 .kp-content-card .price-table .row,
 .kp-content-card .row {
   grid-template-columns:
-    70px
-    minmax(150px, 1fr)
-    70px
-    72px
-    90px
-    100px;
+    70px minmax(150px, 1fr) 70px 72px 90px 100px;
 }
 
 /* Preiszeilen mit Bild: deutlich schmaler */
 .kp-content-card .with-pos-images .row {
   grid-template-columns:
-    42px
-    90px
-    minmax(150px, 1fr)
-    58px
-    72px
-    86px
-    96px;
+    42px 90px minmax(150px, 1fr) 58px 72px 86px 96px;
   gap: 6px;
 }
 
@@ -1310,12 +1391,7 @@ padding-left: 92px;
 .kp-content-card #page-40 .row.table-header {
   display: grid;
   grid-template-columns:
-    0px
-    minmax(260px, 1fr)
-    62px
-    58px
-    95px
-    105px;
+    0px minmax(260px, 1fr) 62px 58px 95px 105px;
   gap: 8px;
   align-items: center;
 }
@@ -1335,12 +1411,7 @@ padding-left: 92px;
 .kp-content-card #page-40 .row.table-header {
   display: grid;
   grid-template-columns:
-    6px
-    minmax(210px, 1fr)
-    60px
-    50px
-    95px
-    105px !important;
+    6px minmax(210px, 1fr) 60px 50px 95px 105px !important;
 
   gap: 6px;
   align-items: center;
@@ -1356,7 +1427,7 @@ padding-left: 92px;
 
 /* erste Spalte unsichtbar machen, aber NICHT display:none */
 .kp-content-card #page-40 .col-a,
-.kp-content-card #page-40 .table-header > div:first-child {
+.kp-content-card #page-40 .table-header>div:first-child {
   visibility: hidden;
   overflow: hidden;
   padding: 0;
