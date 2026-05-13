@@ -360,14 +360,18 @@ function applyWrRecommendation(pageId) {
       warn.innerText = "Achtung: Wechselrichter nicht passend!";
       row.appendChild(warn);
     }
-    // Ergebnis für Seite 40 merken
-    if (hasMismatch) localStorage.setItem("wrMismatch", "1");
-    else localStorage.removeItem("wrMismatch");
 
-    // Optional: für Anzeige auf Seite 40 (empfohlen)
-    localStorage.setItem("wrRecoSize", reco);
-    localStorage.setItem("wrRecoModules", String(modules));
   });
+
+  // Ergebnis für Seite 40 merken – erst NACH Prüfung aller Wechselrichter
+  if (hasMismatch) {
+    localStorage.setItem("wrMismatch", "1");
+  } else {
+    localStorage.removeItem("wrMismatch");
+  }
+
+  localStorage.setItem("wrRecoSize", reco);
+  localStorage.setItem("wrRecoModules", String(modules));
 
   // Einmaliger Event-Listener je Seite: bei Eingabe Warnung setzen/entfernen
   if (!pageEl.dataset.wrRecoListener) {
@@ -390,6 +394,9 @@ function applyWrRecommendation(pageId) {
         warn.innerText = "Achtung: Wechselrichter nicht passend!";
         row.appendChild(warn);
       }
+
+      applyWrRecommendation(pageId);
+
     }, true);
 
     pageEl.dataset.wrRecoListener = "1";
