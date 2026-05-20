@@ -476,6 +476,11 @@ import {
   getDocs
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
+import {
+  getFunctions,
+  httpsCallable
+} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-functions.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBJdsU9vmX-tDGTViaO0ANJIgMFuEDL044",
   authDomain: "pw-ht-tga.firebaseapp.com",
@@ -485,6 +490,19 @@ const firebaseConfig = {
   appId: "1:961789355688:web:b9a1a22befb7082387449d",
   measurementId: "G-XGD1PHF5JW"
 };
+
+const blazeConfig = {
+  apiKey: "AIzaSyCcHI5sGR7sFwrWRpo2uQ3Plm0HpTvqr30",
+  authDomain: "kalkpro-4cc29.firebaseapp.com",
+  projectId: "kalkpro-4cc29",
+  storageBucket: "kalkpro-4cc29.firebasestorage.app",
+  messagingSenderId: "185447466021",
+  appId: "1:185447466021:web:e0d0720fae971b4ab52bcc",
+  measurementId: "G-V4SF92V16K"
+};
+
+const blazeApp = initializeApp(blazeConfig, "blazeApp");
+const blazeFunctions = getFunctions(blazeApp, "europe-west1");
 
 const fbApp = initializeApp(firebaseConfig);
 const auth = getAuth(fbApp);
@@ -652,6 +670,15 @@ async function registerRequest() {
       status: "pending"
     });
 
+    await notifyAdminsAboutRegistration({
+      firma,
+      name,
+      email,
+      tel,
+      ort,
+      plz
+    });
+
     await signOut(auth);
 
     if (info) info.innerText = "Registrierung eingegangen. Du erhältst Zugang nach Freigabe.";
@@ -676,7 +703,22 @@ async function registerRequest() {
 
 window.registerRequest = registerRequest;
 
+// -----------------------------
+// Mailbenachrichtigung bei neuer Registrierung
+// -----------------------------
 
+async function notifyAdminsAboutRegistration(data) {
+  const sendMail = httpsCallable(blazeFunctions, "sendRegistrationNotification");
+
+  await sendMail({
+    firma: data.firma,
+    name: data.name,
+    email: data.email,
+    tel: data.tel,
+    ort: data.ort,
+    plz: data.plz
+  });
+}
 
 // -----------------------------
 // TableHeaderWithImage - Bild neben Spaltenüberschriften einfügen
