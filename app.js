@@ -558,8 +558,9 @@ const db = getFirestore(fbApp);
 // Admin-Liste
 // -----------------------------
 const ADMIN_EMAILS = [
-  "pascal.gasch@tpholding.de"
-  
+  "pascal.gasch@tpholding.de",
+  "marcel.zens@tpholding.de",
+  "julian.kniep@tga-nord.de"
 ];
 
 function isAdminUser() {
