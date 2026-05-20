@@ -512,7 +512,7 @@ const blazeFunctions = getFunctions(blazeApp, "europe-west1");
 const fbApp = initializeApp(firebaseConfig);
 
 const appCheck = initializeAppCheck(fbApp, {
-  provider: new ReCaptchaV3Provider("DEIN_RECAPTCHA_V3_SITE_KEY"),
+  provider: new ReCaptchaV3Provider("6LdkzfMsAAAAAPzfw-7G2QLVI1fwfusXsxzL7Bpf"),
   isTokenAutoRefreshEnabled: true
 });
 
