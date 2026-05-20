@@ -481,6 +481,11 @@ import {
   httpsCallable
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-functions.js";
 
+import {
+  initializeAppCheck,
+  ReCaptchaV3Provider
+} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app-check.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBJdsU9vmX-tDGTViaO0ANJIgMFuEDL044",
   authDomain: "pw-ht-tga.firebaseapp.com",
@@ -505,6 +510,12 @@ const blazeApp = initializeApp(blazeConfig, "blazeApp");
 const blazeFunctions = getFunctions(blazeApp, "europe-west1");
 
 const fbApp = initializeApp(firebaseConfig);
+
+const appCheck = initializeAppCheck(fbApp, {
+  provider: new ReCaptchaV3Provider("DEIN_RECAPTCHA_V3_SITE_KEY"),
+  isTokenAutoRefreshEnabled: true
+});
+
 const auth = getAuth(fbApp);
 (async () => {
   // 1) Persistenz: nichts im Browser behalten
