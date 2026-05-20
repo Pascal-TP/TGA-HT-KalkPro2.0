@@ -558,9 +558,8 @@ const db = getFirestore(fbApp);
 // Admin-Liste
 // -----------------------------
 const ADMIN_EMAILS = [
-  "pascal.gasch@tpholding.de",
-  "marcel.zens@tpholding.de",
-  "julian.kniep@tga-nord.de"
+  "pascal.gasch@tpholding.de"
+  
 ];
 
 function isAdminUser() {
@@ -711,6 +710,7 @@ async function notifyAdminsAboutRegistration(data) {
   const sendMail = httpsCallable(blazeFunctions, "sendRegistrationNotification");
 
   await sendMail({
+    adminEmails: ADMIN_EMAILS,
     firma: data.firma,
     name: data.name,
     email: data.email,
