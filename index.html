@@ -7,6 +7,7 @@
     <title>TGA-hansetherm KalkPro2.0</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -163,6 +164,10 @@
                         <input type="checkbox" id="chkPrivacyAck2">
                         <span>Ich habe die Datenschutzerklärung zur Kenntnis genommen.</span>
                     </label>
+                </div>
+
+                <div class="recaptcha-wrap">
+                    <div class="g-recaptcha" data-sitekey="DEIN_SITE_KEY_HIER"></div>
                 </div>
 
                 <button id="btnRegisterSend" onclick="registerRequest()">Registrierung absenden</button>
@@ -891,7 +896,7 @@
                 <div class="button-bar">
                     <button id="btnWeiter21Normal" onclick="direktZumAngebot()">Direkt zur Ausgabeseite</button>
                     <button id="btnWeiter21Komplett" class="btn-komplett hidden"
-                        onclick="showPage('page-10-1')">Weiter</button>                    
+                        onclick="showPage('page-10-1')">Weiter</button>
                 </div>
             </div>
 

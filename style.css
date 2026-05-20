@@ -1627,3 +1627,9 @@ body.is-logged-in .kp-login-nav {
 body:not(.is-logged-in) #kp-selection-summary {
   display: none;
 }
+
+.recaptcha-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 14px 0;
+}
